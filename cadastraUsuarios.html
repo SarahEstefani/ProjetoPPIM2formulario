@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <head>
+        <title>Cadastro Usuario</title>
+     
+    </head>
+    <body>
+      <div>
+        <h1 id="titulo">Cadastro de Usuario</h1>
+      </div>
+      <form>
+        <fieldset class="grupo">
+          <div class="campo">
+          <label for="nome"><strong>Nome</strong></label>
+          <input type="text" name="nome" id="nome" required></input>
+          </div>
+          <div class="campo">
+             <label for="sobrenome"><strong>Sobrenome</strong></label>
+          <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+          </fieldset>
+      <br>
+      <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+          <input type="email" name="email" id="email" required>
+      </div>
+      <br>
+      <div class="campo">
+        <label for="aplicacao"><strong>De qual lado da aplicação você desenvolve?</strong></label>
+        <label>
+        <input type="radio"  id="aplicacao" nome="devweb" value="frontend" checked>Front-end
+        </input>
+        </label>
+      <label>
+      <input type="radio" id="aplicacao" nome="devweb" value="backend">Back-end
+        </input>
+      </label>
+      <label>
+      <input type="radio" id="aplicacao" nome="devweb" value="fullstack">Fullstack
+        </input>
+    </label>
+        </div>
+    <br>
+    <div class="campo">
+      <label for="senioridade"><strong> Senioridade </strong></label>
+      <select id="senioridade">
+        <option selected disable value="">Selecione</option>
+        <option>Junior</option>
+            <option>Pleno</option>
+            <option>Senior</option> </select>
+     
+    </div>
+    <div class="campo">
+      <br>
+      <label><strong>Conte um pouco da sua experiência:</strong></label>
+      <textarea row="6" style="width: 26em" id="experiencia" nome="experiencia"></textarea>
+    </div>
+    </br>
+
+    <button class="botao" type="submit">Concluir</button>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            'use strict'
+
+            var forms = document.querySelectorAll('.needs-validation')
+            const form = forms[0];
+            form.addEventListener('submit', (event) => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+
+                        form.classList.add('was-validated')
+                    });
+                
+        })();
+    </script>
+</body>
+</html>
